@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - punto de entrada
+ * _isalpha - punto de entrada
  * @c: dato
  * Return: 1, 0
  */
@@ -9,7 +9,7 @@ int _isalpha(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
-		return(1);
+		return (1);
 	}
 
 	if (c >= 'A' && c <= 'Z')
