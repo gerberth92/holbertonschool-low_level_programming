@@ -14,11 +14,12 @@ int print_last_digit(int n)
 		entero = (n * -1);
 
 		_putchar(entero % 10 + '0');
+		return (entero % 10);
 	}
 
 	if (n >= 0)
 	{
 		_putchar(n % 10 + '0');
+		return (n % 10);
 	}
-	return (entero % 10);
 }
