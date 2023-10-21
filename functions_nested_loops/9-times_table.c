@@ -21,12 +21,12 @@ void times_table(void)
 				_putchar(producto / 10 + '0');
 			}
 			_putchar(producto % 10 + '0');
-			
+
 			if (j < 9)
 			{
 				_putchar(',');
 
-				if (i * (j + 1 ) < 10)
+				if (i * (j + 1) < 10)
 				{
 					_putchar(' ');
 				}
