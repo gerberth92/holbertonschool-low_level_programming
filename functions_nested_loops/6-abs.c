@@ -2,7 +2,7 @@
 
 /**
  * _abs - punto de entrada
- * @int: valor
+ * @n: valor
  * Return: 0
  */
 int _abs(int n)
