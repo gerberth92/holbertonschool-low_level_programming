@@ -1,6 +1,0 @@
-all: school ejecutar
-
-school: m.h main.c school.c
-	gcc -o school main.c m.h school.c
-ejecutar: school
-	./school
