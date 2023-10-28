@@ -2,7 +2,7 @@
 
 /**
  * print_rev - putno de entrada
- * @str: dato
+ * @s: dato
  */
 void print_rev(char *s)
 {
