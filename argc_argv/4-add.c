@@ -5,7 +5,6 @@
  * main - punto de entrada
  * @argc: contador de argumentos
  * @argv: array de argumentos
- * @suma: suma los datos ingresados
  * Return: 1 si da error
  */
 int main(int argc, char *argv[])
