@@ -27,10 +27,12 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	for (i = 0; i <= c; i++)
+	for (i = 0; i < c; i++)
 	{
 		array[i] = str[i];
 	}
+
+	array[i] = '\0';
 
 	return (array);
 }
