@@ -4,7 +4,7 @@
  * str_concat - funcion que acepta dos argumentos tipo char a concatenar
  * @s1: argumento 1 tipo char
  * @s2: argumento 2 tipo char
- * Return:
+ * Return: puntero con la concatenacion
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 	for (b = 0; s2[b] != '\0'; b++)
 	{}
 
-	array = malloc(sizeof(char) * (a + b));
+	array = malloc(sizeof(char) * (a + b + 1));
 
 	if (array == NULL)
 	{
