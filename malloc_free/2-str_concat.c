@@ -9,10 +9,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *array;
-	int a;
-	int b;
-	int i;
-	int c;
+	int a, b, c, i;
 
 	if (s1 == NULL)
 	{
@@ -42,7 +39,7 @@ char *str_concat(char *s1, char *s2)
 		array[i] = s1[i];
 	}
 
-	for(c = 0; c < b; c++)
+	for (c = 0; c < b; c++)
 	{
 		array[a + c] = s2[c];
 	}
