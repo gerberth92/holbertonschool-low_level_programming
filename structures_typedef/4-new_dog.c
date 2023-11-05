@@ -1,6 +1,19 @@
 #include "dog.h"
 
 /**
+ * contador - cuanta los elementos de una array
+ * @dato: array
+ */
+int contador(char *dato)
+{
+	int i;
+
+	for (i = 0; dato[i] != '\0'; i++)
+	{}
+	return (i);
+}
+
+/**
  * new_dog - crea una nueva estructura
  * @name: nombre del perro
  * @age: edad del perro
@@ -11,42 +24,41 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
 	char *copy_name, *copy_owner;
-	int i, j;
+	int c;
 
 	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; name[i] != '\0'; i++)
-	{}
-	copy_name = malloc(sizeof(char) * i + 1);
+
+	copy_name = malloc(contador(name) + 1);
 
 	if (copy_name == NULL)
 	{
 		return (NULL);
 	}
-	new_dog->name = name;
-
-	for (j = 0; name[j] != '\0'; j++)
+	for (c = 0; name[c] != '\0'; c++)
 	{
-		copy_name[j] = name[j];
+		copy_name[c] = name[c];
 	}
-	copy_name[j] = '\0';
+	copy_name[c] = '\0';
+
+	new_dog->name = copy_name;
 	new_dog->age = age;
-	new_dog->owner = owner;
-	for (i = 0; owner[i] != '\0'; i++)
-	{}
-	copy_owner = malloc(sizeof(char) * i + 1);
+
+	copy_owner = malloc(contador(owner) + 1);
 
 	if (copy_owner == NULL)
 	{
 		return (NULL);
 	}
-	for (j = 0; owner[j] != '\0'; j++)
+	for (c = 0; owner[c] != '\0'; c++)
 	{
-		copy_owner[j] = owner[j];
+		copy_owner[c] = owner[c];
 	}
-	copy_owner[j] = '\0';
+	copy_owner[c] = '\0';
+
+	new_dog->owner = copy_owner;
 	return (new_dog);
 }
